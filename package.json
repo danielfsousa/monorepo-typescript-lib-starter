@@ -12,16 +12,11 @@
     "name": "Daniel Sousa",
     "email": "sousa.dfs@gmail.com"
   },
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "clean": "rimraf docs coverage .eslintcache packages/**/dist",
-    "commit": "git-cz",
+    "commit": "git-cz --disable-emoji",
     "predocs": "rimraf docs",
     "docs": "typedoc",
     "docs:deploy": "node scripts/gh-pages-publish.js",
