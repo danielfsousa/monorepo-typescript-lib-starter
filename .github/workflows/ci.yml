@@ -53,6 +53,10 @@ jobs:
         if: startsWith(matrix.node-version, '14')
         uses: codecov/codecov-action@v1
 
+      - name: Generate docs
+        if: success() && startsWith(matrix.node-version, '14') && github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: npm run docs
+
       - name: Deploy docs
         if: success() && startsWith(matrix.node-version, '14') && github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3
@@ -61,7 +65,7 @@ jobs:
           publish_dir: ./docs
 
       - name: Publish release
-        if: success() && startsWith(matrix.node-version, '14') && github.event_name == 'push'
+        if: success() && startsWith(matrix.node-version, '14') && github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           git config --global user.email "sousa.dfs@gmail.com"
           git config --global user.name "Daniel Sousa"
