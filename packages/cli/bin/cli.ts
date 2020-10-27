@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import program from 'commander'
 import { add, ms, subtract } from '@danielfsousa/core'
 import { printHelp } from '../src/utils'

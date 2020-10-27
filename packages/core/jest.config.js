@@ -9,7 +9,7 @@ module.exports = {
   rootDir: './',
   globals: {
     'ts-jest': {
-      tsConfig: path.join(__dirname, './tsconfig.json')
+      tsconfig: path.join(__dirname, './tsconfig.json')
     }
   }
 }

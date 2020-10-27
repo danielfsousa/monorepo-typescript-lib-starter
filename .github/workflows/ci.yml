@@ -32,7 +32,7 @@ jobs:
             ${{ runner.OS }}-
 
       - name: Install
-        run: npx lerna bootstrap
+        run: npx lerna bootstrap --hoist --ci
 
       - name: Lint
         run: npm run lint
@@ -63,7 +63,7 @@ jobs:
 
       - name: Publish release
         if: success() && startsWith(matrix.node-version, '14') && github.event_name == 'push'
-        run: npx lerna publish --yes
+        run: npm run publish -- --yes
         env:
           CI: true
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
