@@ -1,6 +1,6 @@
 # monorepo-typescript-lib-starter
 
-[![CI status](https://github.com/danielfsousa/monorepo-typescript-lib-starter/workflows/ci/badge.svg)](https://github.com/danielfsousa/dotenv-azure/actions?query=workflow%ci)
+[![CI status](https://github.com/danielfsousa/monorepo-typescript-lib-starter/workflows/ci/badge.svg?branch=main)](https://github.com/danielfsousa/dotenv-azure/actions?query=workflow%ci)
 [![codecov](https://codecov.io/gh/danielfsousa/monorepo-typescript-lib-starter/branch/main/graph/badge.svg)](https://codecov.io/gh/danielfsousa/monorepo-typescript-lib-starter)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
