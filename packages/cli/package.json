@@ -19,10 +19,6 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc -p tsconfig.build.json",
-    "docs": "npm run docs:gen && npm run docs:open",
-    "docs:gen": "pd-jsdoc generate",
-    "docs:open": "pd-jsdoc open",
-    "docs:upload": "pd-jsdoc upload",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "lint": "eslint . --ext ts,js --cache",
