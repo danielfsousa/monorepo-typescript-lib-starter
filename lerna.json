@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "command": {
     "publish": {
+      "allowBranch": "main",
+      "changelogPreset": "angular",
       "conventionalCommits": true,
       "createRelease": "github",
       "message": "chore(release): publish %s\n[skip-ci]"
