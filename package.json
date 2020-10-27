@@ -23,7 +23,6 @@
     "format:check": "prettier . --check",
     "lint": "eslint . --ext ts,js --cache",
     "lint:fix": "eslint . --ext ts,js --cache --fix",
-    "publish": "lerna publish",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "watch": "lerna run --parallel watch"
