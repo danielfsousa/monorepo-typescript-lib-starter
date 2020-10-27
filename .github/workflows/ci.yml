@@ -32,7 +32,9 @@ jobs:
             ${{ runner.OS }}-
 
       - name: Install
-        run: npm ci
+        run: |
+          npm ci
+          npm run bootstrap
 
       - name: Lint
         run: npm run lint
