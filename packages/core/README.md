@@ -1,6 +1,6 @@
 # `@danielfsousa/core`
 
-This package should contain the core logic of your app
+An example of an isomorphic library from https://github.com/danielfsousa/monorepo-typescript-lib-starter
 
 ## Install
 

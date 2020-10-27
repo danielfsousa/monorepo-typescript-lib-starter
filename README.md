@@ -1,6 +1,6 @@
 # monorepo-typescript-lib-starter
 
-![Build status](https://github.com/danielfsousa/monorepo-typescript-lib-starter/workflows/ci/badge.svg)
+[![CI status](https://github.com/danielfsousa/monorepo-typescript-lib-starter/workflows/ci/badge.svg)](https://github.com/danielfsousa/dotenv-azure/actions?query=workflow%ci)
 [![codecov](https://codecov.io/gh/danielfsousa/monorepo-typescript-lib-starter/branch/main/graph/badge.svg)](https://codecov.io/gh/danielfsousa/monorepo-typescript-lib-starter)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
@@ -22,19 +22,18 @@ rm -rf .git
 
 ## Features
 
-- [lerna]() for managing a monorepo
-- [RollupJS]() for multiple [optimized bundles](https://2ality.com/2017/04/setting-up-multi-platform-packages.html) with tree shaking for UMD (browsers), CommonJS (Node.js) and ES Modules (module bundlers)
+- [lerna](https://github.com/lerna/lerna) for managing a monorepo
+- [RollupJS](https://github.com/rollup/rollup) for multiple [optimized bundles](https://2ality.com/2017/04/setting-up-multi-platform-packages.html) with tree shaking for UMD (browsers), CommonJS (Node.js) and ES Modules (module bundlers)
 - Automatic types (\*.d.ts) file generation
-- Tests and coverage report generation using [Jest]()
-- [ESlint]() with [standard]() style for linting typescript and javascript files
-- [Prettier]() for code formatting
-- Automatic documentation generation with [TypeDoc]() and deployment to [Github Pages]()
-- Pre-commit hooks with [husky]() and [lint-staged]() for linting, code formatting, unit tests and commit message validation
-- [Coveralls]() for consuming coverage reports
-- [Dependabot]() for automatic dependencies updates
-- Automatic releases and changelog, using [Semantic release](), [Commitizen]() and [Conventional changelog]()
-- CI/CD with [Github Workflows]()
-- Pre-created examples for a [CLI app]() and an isomorphic [core library]() that runs on browsers, [Node.js]() and [Deno]()
+- Tests and coverage report generation using [Jest](https://github.com/facebook/jest)
+- [ESlint](https://github.com/eslint/eslint) with [standard](https://github.com/standard/eslint-config-standard-with-typescript) style for linting typescript and javascript files
+- [Prettier](https://github.com/prettier/prettier) for code formatting
+- Automatic documentation generation with [TypeDoc](https://github.com/TypeStrong/typedoc) and deployment to [Github Pages](https://pages.github.com/)
+- Pre-commit hooks with [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged) for linting, code formatting, unit tests and commit message validation
+- [Codecov](https://codecov.io/) for consuming coverage reports
+- Automatic releases and changelog, using [lerna](https://github.com/lerna/lerna) and [Commitizen](https://github.com/commitizen/cz-cli)(https://conventionalcommits.org/en/v1.0.0/)
+- CI/CD with [Github Actions](https://docs.github.com/en/free-pro-team@latest/actions)
+- Pre-created examples for a [CLI app](./packages/cli/README.md) and an isomorphic [core library](./packages/core/README.md) that runs on browsers, [Node.js](https://nodejs.org/en/) and [Deno](https://deno.land/)
 
 ## Scripts
 
@@ -48,7 +47,7 @@ Execute the scripts from the root directory to run for all packages or inside a 
 - `npm run format:check` Check if code is following the prettier style
 - `npm run lint` Lints code
 - `npm run lint:fix` Lints and tries to fix linting errors
-- `npm run publish` Bump version based on the commits messages, edit the CHANGELOG file and publish a new release to npm and github
+- `npm run publish` Bump packages versions based on the commits messages, edit the CHANGELOG file and publish a new release to npm and github
 - `npm run test` Run test suite and generate coverage report
 - `npm run test:watch` Run test suite in interactive watch mode
 - `npm run watch` Run build script in watch mode

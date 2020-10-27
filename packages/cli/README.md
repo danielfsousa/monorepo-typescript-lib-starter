@@ -1,6 +1,6 @@
 # `@danielfsousa/cli`
 
-A CLI to run the core logic of your app
+An example of a CLI App from https://github.com/danielfsousa/monorepo-typescript-lib-starter
 
 ## Install
 
