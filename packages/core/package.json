@@ -40,5 +40,8 @@
   },
   "devDependencies": {
     "@types/ms": "^0.7.31"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
