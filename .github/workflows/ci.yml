@@ -35,10 +35,9 @@ jobs:
         run: npx lerna bootstrap --hoist --ci
 
       - name: Lint
-        run: npm run lint
-
-      - name: Check code format
-        run: npm run format:check
+        run: |
+          npm run lint
+          npm run format:check
 
       - name: Test
         run: npm run test
@@ -63,7 +62,10 @@ jobs:
 
       - name: Publish release
         if: success() && startsWith(matrix.node-version, '14') && github.event_name == 'push'
-        run: npm run publish -- --yes
+        run: |
+          git config --global user.email "sousa.dfs@gmail.com"
+          git config --global user.name "Daniel Sousa"
+          npm run publish -- --yes
         env:
           CI: true
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
