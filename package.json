@@ -1,0 +1,93 @@
+{
+  "name": "monorepo-typescript-lib-starter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Starter kit for monorepo libraries in Typescript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielfsousa/monorepo-typescript-lib-starter.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Daniel Sousa",
+    "email": "sousa.dfs@gmail.com"
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap --hoist",
+    "build": "lerna run build --stream",
+    "clean": "rimraf docs coverage .eslintcache packages/**/dist",
+    "commit": "git-cz --disable-emoji",
+    "predocs": "rimraf docs",
+    "docs": "typedoc",
+    "docs:deploy": "node scripts/gh-pages-publish.js",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "lint": "eslint . --ext ts,js --cache",
+    "lint:fix": "eslint . --ext ts,js --cache --fix",
+    "publish": "lerna publish",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "watch": "lerna run --parallel watch"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,ts,md,json,yml}": [
+      "prettier --write"
+    ],
+    "*.{js,ts}": [
+      "eslint --fix",
+      "jest --bail --findRelatedTests"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-typescript": "^6.1.0",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.14.5",
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.14.0",
+    "eslint-config-standard-with-typescript": "^19.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.2",
+    "git-cz": "^4.7.1",
+    "husky": "^4.3.0",
+    "jest": "^26.6.1",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.5.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.2",
+    "prettier-plugin-packagejson": "^2.2.7",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.32.1",
+    "ts-jest": "^26.4.3",
+    "typedoc": "^0.19.2",
+    "typedoc-plugin-lerna-packages": "^0.3.1",
+    "typescript": "^4.0.5"
+  },
+  "engines": {
+    "node": ">= 14"
+  }
+}
