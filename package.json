@@ -1,6 +1,5 @@
 {
   "name": "monorepo-typescript-lib-starter",
-  "version": "1.0.0",
   "private": true,
   "description": "Starter kit for monorepo libraries in Typescript",
   "repository": {
