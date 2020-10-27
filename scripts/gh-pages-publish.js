@@ -20,7 +20,7 @@ if (!authorEmail) {
 }
 
 const parsedUrl = new url.URL(repoUrl)
-const repository = parsedUrl.host + parsedUrl.path
+const repository = parsedUrl.host + parsedUrl.pathname
 
 console.log('Deploying docs...')
 
