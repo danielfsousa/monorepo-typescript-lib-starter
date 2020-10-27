@@ -1,6 +1,6 @@
 {
   "name": "@danielfsousa/cli",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "homepage": "https://github.com/danielfsousa/monorepo-typescript-lib-starter#readme",
   "bugs": {
@@ -28,7 +28,7 @@
     "watch": "npm run build -- -w"
   },
   "dependencies": {
-    "@danielfsousa/core": "^0.0.0",
+    "@danielfsousa/core": "^0.0.1",
     "commander": "^6.1.0"
   },
   "publishConfig": {
