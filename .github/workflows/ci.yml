@@ -69,8 +69,8 @@ jobs:
         run: |
           git config --global user.email "sousa.dfs@gmail.com"
           git config --global user.name "Daniel Sousa"
-          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
-          npm run publish -- --yes
+          echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
+          npx lerna publish --yes
         env:
           CI: true
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
