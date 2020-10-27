@@ -21,7 +21,7 @@
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "clean": "rimraf docs coverage .eslintcache packages/**/dist",
-    "commit": "cz",
+    "commit": "git-cz",
     "predocs": "rimraf docs",
     "docs": "typedoc",
     "docs:deploy": "node scripts/gh-pages-publish.js",
