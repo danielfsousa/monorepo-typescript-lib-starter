@@ -1,6 +1,6 @@
 # monorepo-typescript-lib-starter
 
-[![CI status](https://github.com/danielfsousa/monorepo-typescript-lib-starter/workflows/ci/badge.svg?branch=main)](https://github.com/danielfsousa/dotenv-azure/actions?query=workflow%ci)
+[![CI status](https://github.com/danielfsousa/monorepo-typescript-lib-starter/workflows/ci/badge.svg?branch=main)](https://github.com/danielfsousa/monorepo-typescript-lib-starter/actions?query=workflow%ci)
 [![codecov](https://codecov.io/gh/danielfsousa/monorepo-typescript-lib-starter/branch/main/graph/badge.svg)](https://codecov.io/gh/danielfsousa/monorepo-typescript-lib-starter)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
@@ -10,14 +10,10 @@ Starter kit for monorepo libraries in Typescript.
 
 If you are building a small library and don't want a monorepo checkout: [danielfsousa/typescript-lib-starter](https://github.com/danielfsousa/typescript-lib-starter)
 
-## Usage
-
-Click on the `Use this template` button on github or clone the repository and remove the `.git` folder:
+## Quick start
 
 ```bash
-git clone https://github.com/danielfsousa/monorepo-typescript-lib-starter --depth 1
-cd monorepo-typescript-lib-starter
-rm -rf .git
+npm init @danielfsousa monorepo-typescript-lib my-lib
 ```
 
 ## Features
